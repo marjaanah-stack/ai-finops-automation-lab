@@ -4,7 +4,7 @@ An OpenAI-Agent-based automation that reconciles bank transactions to the genera
 # 🤖 AI Finance-Ops Agent: Bank-to-GL Reconciliation
 
 This project demonstrates an **AI-assisted finance operations workflow** that automates the reconciliation between bank transactions and the General Ledger (GL).  
-It was designed and built by **Marjaana Peeters**, aspiring AI-savvy fractional CFO, to explore how no-code agents and synthetic finance data can automate repetitive accounting processes.
+It was designed and built by **Marjaana Peeters**, AI-savvy finance professional, to explore how no-code agents and synthetic finance data can automate repetitive accounting processes.
 
 ---
 
@@ -132,137 +132,6 @@ The OpenAI no-code Agent performs:
 
 ---
 
-## 📸 Recommended Screenshots for `docs/screenshots/`
-
-Add the following as PNGs and embed them in the README:
-
-| Screenshot | Purpose | Filename |
-|-------------|----------|-----------|
-| Agent Canvas in ChatGPT | Shows visual node setup | `agent_canvas.png` |
-| Google Sheets Dashboard | KPI cards + line chart | `dashboard_metrics.png` |
-| CATEGORIES + RUN_LOG tabs | Configuration example | `control_rules.png` |
-| Folder structure in Drive | Data organisation view | `drive_structure.png` |
-
-Include links like:  
-`![Dashboard](docs/screenshots/dashboard_metrics.png)`  
-`![Agent Canvas](docs/screenshots/agent_canvas.png)`
-
----
-
-## 📦 Synthetic Dataset
-
-A ready-to-use dataset with demo values is provided:  
-[`Bank-to-GL_Reconciliation_Template_inputs.zip`](./Bank-to-GL_Reconciliation_Template_inputs.zip)
-
-Unzip and place in your `inputs_template/` folder.
-
----
-
-## 🧭 Getting Started
-
-1. Clone this repo  
-   ```bash
-   git clone https://github.com/<yourusername>/finance-ops-agent.git
-   cd finance-ops-agent
-
----
-
-## 📋 Workflow Steps
-
-### 1️⃣ Inputs
-Four CSVs act as input datasets (synthetic or real):
-- `bank_transactions_template.csv`
-- `ar_invoices_template.csv`
-- `ap_bills_template.csv`
-- `gl_journal_template.csv`
-
-### 2️⃣ Control Sheet
-Holds configuration, categorisation rules, and run log:
-- `CONFIG`: file paths, tolerances  
-- `CATEGORIES`: keyword → account mapping  
-- `RUN_LOG`: timestamped record of each run
-
-### 3️⃣ Output Sheet
-Contains:
-- `SUMMARY`  
-- `MATCHED_AR` / `MATCHED_AP`  
-- `UNMATCHED`  
-- `SUGGESTED_JOURNALS`  
-- `DASHBOARD` (live KPI & chart)
-
-### 4️⃣ AI Agent
-The OpenAI no-code Agent performs:
-1. Load CSVs (from Google Drive)
-2. Match AR/AP vs. bank data  
-3. Categorise unmatched lines  
-4. Generate journal suggestions  
-5. Append run logs  
-6. Refresh dashboard
-
-### 5️⃣ Automation (optional)
-- Slack alert if match rate < 95 %  
-- n8n / Make flow to duplicate template folders for each client (`<PROJECT_NAME>`)  
-- GitHub Actions / cron for nightly refresh
-
----
-
-## 🧾 Example Outputs
-
-| Metric | Value |
-|---------|-------|
-| Latest Run | 2025-10-13 13:15 |
-| Bank Rows | 707 |
-| Matched AP | 641 |
-| Unmatched | 66 |
-| Match Rate | 90.7 % |
-| Comment | auto-cat + journals added |
-
-**Suggested Journal Example**
-| Date | Account | Memo | Debit | Credit |
-|------|----------|------|--------|--------|
-| 2025-01-12 | 5100 | Bank charges | 15.00 | 0.00 |
-| 2025-01-12 | 1000 | Bank account | 0.00 | 15.00 |
-
----
-
-## 📸 Recommended Screenshots for `docs/screenshots/`
-
-Add the following as PNGs and embed them in the README:
-
-| Screenshot | Purpose | Filename |
-|-------------|----------|-----------|
-| Agent Canvas in ChatGPT | Shows visual node setup | `agent_canvas.png` |
-| Google Sheets Dashboard | KPI cards + line chart | `dashboard_metrics.png` |
-| CATEGORIES + RUN_LOG tabs | Configuration example | `control_rules.png` |
-| Folder structure in Drive | Data organisation view | `drive_structure.png` |
-
-Include links like:  
-`![Dashboard](docs/screenshots/dashboard_metrics.png)`  
-`![Agent Canvas](docs/screenshots/agent_canvas.png)`
-
----
-
-## 📦 Synthetic Dataset
-
-A ready-to-use dataset with demo values is provided:  
-[`Bank-to-GL_Reconciliation_Template_inputs.zip`](./Bank-to-GL_Reconciliation_Template_inputs.zip)
-
-Unzip and place in your `inputs_template/` folder.
-
----
-
-## 🧭 Getting Started
-
-1. Clone this repo  
-   ```bash
-   git clone https://github.com/<yourusername>/finance-ops-agent.git
-   cd finance-ops-agent
-
-Unzip Bank-to-GL_Reconciliation_Template_inputs.zip
-Open the OpenAI Projects → Agent Builder
-Create a new Agent using the description in agent_prompt.md (optional)
-Connect Google Sheets (read/write) + Drive
-Run your first reconciliation!
 
 🧩 Next Steps / Extensions
 Add OCR invoice ingestion (Google Vision / Tesseract)
@@ -272,8 +141,8 @@ Build an n8n scenario for one-click monthly close
 
 🧠 Author
 Marjaana Peeters
-AI-native fractional CFO & strategic finance advisor
-LinkedIn | GitHub
+AI-native strategic finance professional
+LinkedIn: www.linkedin.com/in/marjaana-peeters-0442a4
 
 🪪 License
 MIT License – feel free to reuse, credit, and extend.
