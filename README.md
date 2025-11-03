@@ -1,6 +1,3 @@
-# ai-finops-automation-lab
-An OpenAI-Agent-based automation that reconciles bank transactions to the general ledger, generates journal entries, and updates live dashboards via Google Sheets.
-
 # 🤖 AI Finance-Ops Agent: Bank-to-GL Reconciliation
 
 This project demonstrates an **AI-assisted finance operations workflow** that automates the reconciliation between bank transactions and the General Ledger (GL).  
